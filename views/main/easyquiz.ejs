@@ -1,0 +1,93 @@
+<%- include("./../partials/header.ejs") %>
+
+    <body>
+        <%var count=0%>
+            <%var num=0%>
+                <%- include("./../partials/navbar.ejs") %>
+                    <form action="/submit" method="POST" class="form">
+                        <div class="carousel">
+                            <div class="carousel__item carousel__item--visible">
+                                <div class="question">
+                                    <span class="ques">
+                                        <%=result[0].question%>
+                                    </span><span class="number">
+                                        <%=`${++num} /10`%>
+                                    </span>
+                                </div><br>
+                                <input type="radio" id="male" name="ques<%=count%>" value="<%=result[0].answers[0]%>">
+                                <label for="male">
+                                    <p class="ans">
+                                        <%=result[0].answers[0]%>
+                                    </p>
+                                </label><br>
+                                <input type="radio" id="female" name="ques<%=count%>" value="<%=result[0].answers[1]%>">
+                                <label for="female">
+                                    <p class="ans">
+                                        <%=result[0].answers[1]%>
+                                    </p>
+                                </label><br>
+                                <input type="radio" id="other" name="ques<%=count%>" value="<%=result[0].answers[2]%>">
+                                <label for="other">
+                                    <p class="ans">
+                                        <%=result[0].answers[2]%>
+                                    </p>
+                                </label><br>
+                                <input type="radio" id="other" name="ques<%=count%>" value="<%=result[0].answers[3]%>">
+                                <label for="other">
+                                    <p class="ans">
+                                        <%=result[0].answers[3]%>
+                                    </p>
+                                </label>
+
+                            </div>
+                            <%for(var i=1;i<result.length;i++){%>
+                                <%count++%>
+                                    <div class="carousel__item">
+                                        <div class="question">
+                                            <span class="ques">
+                                                <%=result[i].question%>
+                                            </span><span class="number">
+                                                <%=`${++num} /10`%>
+                                            </span>
+                                        </div><br>
+                                        <input type="radio" id="male" name="ques<%=count%>"
+                                            value="<%=result[i].answers[0]%>">
+                                        <label for="male">
+                                            <p class="ans">
+                                                <%=result[i].answers[0]%>
+                                            </p>
+                                        </label><br>
+                                        <input type="radio" id="female" name="ques<%=count%>"
+                                            value="<%=result[i].answers[1]%>">
+                                        <label for="female">
+                                            <p class="ans">
+                                                <%=result[i].answers[1]%>
+                                            </p>
+                                        </label><br>
+                                        <input type="radio" id="other" name="ques<%=count%>"
+                                            value="<%=result[i].answers[2]%>">
+                                        <label for="other">
+                                            <p class="ans">
+                                                <%=result[i].answers[2]%>
+                                            </p>
+                                        </label><br>
+                                        <input type="radio" id="other" name="ques<%=count%>"
+                                            value="<%=result[i].answers[3]%>">
+                                        <label for="other">
+                                            <p class="ans">
+                                                <%=result[i].answers[3]%>
+                                            </p>
+                                        </label>
+
+                                    </div>
+                                    <%}%>
+                                        <div class="carousel__actions">
+                                            <button id="carousel__button--prev" type="button" class="prev ">
+                                                Prev </button>
+                                            <button id="carousel__button--next" type="button" class="next">Next</button>
+                                            <button type="submit" value="Submit" class="submit ">Submit</button>
+                                        </div>
+                        </div>
+                    </form>
+                    <script src="/js/quiz.js"></script>
+    </body>

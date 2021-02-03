@@ -1,0 +1,83 @@
+.carousel {
+  overflow: hidden;
+  max-width: 600px;
+  position: relative;
+}
+
+.carousel .carousel__item, .carousel .carousel__item--hidden {
+  display: none;
+}
+
+.carousel .carousel__item--visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel__actions {
+  width: 100%;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+  margin-top: 20px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 70px;
+  height: 40px;
+}
+
+.carousel .carousel__actions button#carousel__button--prev {
+  margin-right: 10px;
+}
+
+.carousel .carousel__actions button#carousel__button--next {
+  margin-right: 50px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+}
+
+.carousel .carousel__item p {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+.form {
+  background: url('/images/bgquiz.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel .carousel__item {
+  position: relative;
+}
