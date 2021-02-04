@@ -4,14 +4,12 @@
         <%var count=0%>
             <%var num=0%>
                 <%- include("./../partials/navbar.ejs") %>
-                    <form action="/submit" method="POST" class="form">
+                    <form action="/submit/Easy" method="POST" class="form">
                         <div class="carousel">
                             <div class="carousel__item carousel__item--visible">
                                 <div class="question">
                                     <span class="ques">
-                                        <%=result[0].question%>
-                                    </span><span class="number">
-                                        <%=`${++num} /10`%>
+                                        <%=`${++num}`%>. <%=result[0].question%>
                                     </span>
                                 </div><br>
                                 <input type="radio" id="male" name="ques<%=count%>" value="<%=result[0].answers[0]%>">
@@ -45,9 +43,7 @@
                                     <div class="carousel__item">
                                         <div class="question">
                                             <span class="ques">
-                                                <%=result[i].question%>
-                                            </span><span class="number">
-                                                <%=`${++num} /10`%>
+                                                <%=`${++num}`%>. <%=result[i].question%>
                                             </span>
                                         </div><br>
                                         <input type="radio" id="male" name="ques<%=count%>"

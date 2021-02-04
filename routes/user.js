@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const authenticateUser = require('../middlewares/authenticateUser');
 const User = require('../models/user');
+const score = require('../models/score');
 const jwt = require('jsonwebtoken');
 
 router.get('/login', (req, res) => {
@@ -87,6 +88,11 @@ router.get("/logout", (req, res) => {
     req.session.user = null;
     res.clearCookie("jwt");
     res.redirect("/");
+});
+
+router.get('/history', authenticateUser, async (req, res) => {
+    const result = await score.find({ user: req.session.user });
+    res.render('main/history', { user: req.session.user, score: result });
 });
 
 module.exports = router;

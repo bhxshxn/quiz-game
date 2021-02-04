@@ -70,3 +70,11 @@ body {
     color: black;
     font-weight: 700;
 }
+
+.table-his {
+    margin-top: 20px;
+}
+
+.navbar ul {
+    margin-right: 30px;
+}
