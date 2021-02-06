@@ -5,6 +5,7 @@ const easy = require('../models/easyQuestions');
 const score = require('../models/score');
 router.use('/user', require('../routes/user'));
 
+
 router.get('/', (req, res) => {
     if (req.cookies.jwt) {
         const result = jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
@@ -15,6 +16,7 @@ router.get('/', (req, res) => {
         res.render('main/index', { user: req.session.user });
     }
 })
+
 
 router.get('/easy', async (req, res) => {
     const result = await easy.find({});
@@ -48,5 +50,6 @@ router.post('/submit/:id', async (req, res) => {
         res.render('main/succes', { user: req.session.user, point: point })
     }
 });
-router
+
+
 module.exports = router;
