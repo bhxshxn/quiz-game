@@ -33,9 +33,16 @@
 
 .links {
     margin-top: 30px;
-    margin-left: 100px;
 }
 
-.links button {
-    margin-bottom: 30px;
+@media only screen and (max-width: 600px) {
+    .center h1 {
+        font-size: 30px;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
