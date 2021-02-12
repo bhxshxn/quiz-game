@@ -76,7 +76,7 @@ router
         }
 
         // else he\s logged in
-        const jwtToken = jwt.sign({ username: req.body.username }, process.env.JWT_SECRET);
+        const jwtToken = jwt.sign({ username: req.body.username }, "2Jyq1y57Ae9MgCE007Z8OGzWKWRQeAPA");
         res.cookie("jwt", jwtToken, { expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000) });
         req.session.user = username;
         // console.log(req.session.user);

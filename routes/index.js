@@ -8,7 +8,7 @@ router.use('/user', require('../routes/user'));
 
 router.get('/', (req, res) => {
     if (req.cookies.jwt) {
-        const result = jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
+        const result = jwt.verify(req.cookies.jwt, "2Jyq1y57Ae9MgCE007Z8OGzWKWRQeAPA");
         req.session.user = result.username;
         res.render('main/home', { user: req.session.user });
     } else {
