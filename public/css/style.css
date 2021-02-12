@@ -2,6 +2,8 @@
     text-decoration: none;
     color: black;
     font-size: 30px;
+    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .links a:hover {
@@ -31,4 +33,9 @@
 
 .links {
     margin-top: 30px;
+    margin-left: 100px;
+}
+
+.links button {
+    margin-bottom: 30px;
 }
