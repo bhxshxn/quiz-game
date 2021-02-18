@@ -78,3 +78,26 @@ body {
 .navbar ul {
     margin-right: 30px;
 }
+
+@media only screen and (max-width: 700px) {
+    .resl {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: inline;
+    }
+    .resl a {
+        color: black;
+        font-weight: 700;
+    }
+    .resr {
+        position: relative;
+        top: 35px;
+        left: 130px;
+        display: inline;
+    }
+    .resr a {
+        color: black;
+        font-weight: 700;
+    }
+}
