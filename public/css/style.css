@@ -13,10 +13,12 @@
 .center {
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    width: 95vw;
+    height: 91vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
+    background: url('/images/homebg.jpg');
+    background-size: cover;
 }
 
 .links button {
@@ -24,7 +26,7 @@
     width: 200px;
     border: none;
     border-radius: 10px;
-    margin: 0 5px;
+    margin: 0 50px;
 }
 
 .links button:focus {
@@ -45,4 +47,17 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.center h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.easybg {
+    height: 90vh;
+    width: 100vw;
+    background: url('/images/easybg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

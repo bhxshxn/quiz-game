@@ -4,12 +4,19 @@ body {
     background-repeat: no-repeat;
 }
 
+.login-main {
+    height: 90vh;
+    width: 100vw;
+    background: url('/images/loginbg2.jpg');
+    background-repeat: none;
+}
+
 .form-signin {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
     position: relative;
-    top: 80px;
+    top: 120px;
     padding: 30px;
     background-color: rgba(207, 243, 239, .5);
 }
@@ -61,8 +68,8 @@ body {
 
 .register {
     position: relative;
-    top: 40px;
-    left: 570px;
+    top: 0px;
+    left: 30px;
     display: inline;
 }
 
