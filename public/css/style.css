@@ -61,3 +61,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.mediumbg {
+    height: 90vh;
+    width: 100vw;
+    background: url('/images/medium.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hardbg {
+    height: 90vh;
+    width: 100vw;
+    background: url('/images/hard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
